@@ -22,17 +22,10 @@ session_start();
     </div>
 
     <h2>Cadastro</h2>
-    <form action="processar_registro.php" method="post">
+    <form id="form-cadastro">
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required />
-      <span class="error" id="email_error">
-        <?php
-        if (isset($_SESSION['erros']['email'])) {
-          echo $_SESSION['erros']['email'];
-          unset($_SESSION['erros']['email']);
-        }
-        ?>
-      </span>
+      <span class="error" id="email_error" style="display: block; min-height: 15px;"></span>
 
       <label for="nome">Nome</label>
       <input type="text" id="nome" name="nome" required />
@@ -42,28 +35,14 @@ session_start();
         <input type="password" id="senha" name="senha" required />
         <img src="https://img.icons8.com/ios-glyphs/30/000000/invisible.png" class="eye-icon" alt="Mostrar senha" />
       </div>
-      <span class="error" id="senha_error">
-        <?php
-        if (isset($_SESSION['erros']['senha'])) {
-          echo $_SESSION['erros']['senha'];
-          unset($_SESSION['erros']['senha']);
-        }
-        ?>
-      </span>
+      <span class="error" id="senha_error" style="display: block; min-height: 15px;"></span>
 
       <label for="senha2">Repita a senha</label>
       <div class="password-field">
         <input type="password" id="senha2" name="confirmar_senha" required />
         <img src="https://img.icons8.com/ios-glyphs/30/000000/invisible.png" class="eye-icon" alt="Mostrar senha" />
       </div>
-      <span class="error" id="confirmar_senha_error">
-        <?php
-        if (isset($_SESSION['erros']['confirmar_senha'])) {
-          echo $_SESSION['erros']['confirmar_senha'];
-          unset($_SESSION['erros']['confirmar_senha']);
-        }
-        ?>
-      </span>
+      <span class="error" id="confirmar_senha_error" style="display: block; min-height: 15px;"></span>
 
       <button class="btn" type="submit">Cadastrar</button>
     </form>
@@ -74,7 +53,8 @@ session_start();
       Já é usuário? <a href="login.php">Entrar</a>
     </div>
   </div>
-  <script src="../js/cadastro.js"></script>
+
+  <script type="module" src="../script/cadastro.js"></script>
 </body>
 
 </html>
