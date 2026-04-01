@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recuperar Acesso - EcoEscambo</title>
   <link rel="stylesheet" href="../css/style1.css">
-  <link rel="stylesheet" href="../css/recuperar-acesso.css" />
 </head>
 
 <body>
@@ -18,7 +17,7 @@
     </div>
 
     <h2>Recuperar acesso</h2>
-    <form>
+    <form id="form-recuperar">
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required />
       <button class="btn" type="submit">Recuperar acesso</button>
@@ -34,6 +33,8 @@
       Ainda não é usuário? <a href="cadastro.php">Cadastre-se</a>
     </div>
   </div>
+
+  <script type="module" src="../script/recuperar-acesso.js"></script>
 </body>
 
 </html>
