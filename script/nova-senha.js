@@ -12,9 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const senhaInput = document.getElementById("senha");
     const confirmarSenhaInput = document.getElementById("senha2");
 
-    // ==========================================
-    // LÓGICA DO OLHINHO (MOSTRAR/ESCONDER SENHA)
-    // ==========================================
     const eyeIcons = document.querySelectorAll(".eye-icon");
     eyeIcons.forEach((eyeIcon) => {
         eyeIcon.addEventListener("click", (e) => {
@@ -33,9 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ==========================================
     // LÓGICA DE ATUALIZAÇÃO NO SUPABASE
-    // ==========================================
     form.addEventListener("submit", async function (event) {
         event.preventDefault(); 
 
